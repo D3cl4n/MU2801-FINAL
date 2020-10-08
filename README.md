@@ -24,4 +24,4 @@ The idea for the project is to automate a "hanging xylophone" type of instrument
 
 # Designs
 
-![Alt text](/tree/main/designs/sketch0.jpg?raw=true)
+![Screenshot](designs/sketch0.jpg)
