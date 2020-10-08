@@ -25,6 +25,7 @@ The idea for the project is to automate a "hanging xylophone" type of instrument
 # Designs
 
 ![Screenshot](designs/sketch0.jpg)
+![Screenshot](designs/sketch1.png)
 
 # Calculations
 assuming we use all 10' of the copper pipe   
