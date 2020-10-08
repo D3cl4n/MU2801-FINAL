@@ -24,4 +24,4 @@ The idea for the project is to automate a "hanging xylophone" type of instrument
 
 # Designs
 
-![alt-text](https://github.com/D3cl4n/MU2801-FINAL/main/designs/sketch0.jpg?raw=true)
+![alt-text](https://github.com/D3cl4n/MU2801-FINAL/tree/main/designs/sketch0.jpg?raw=true)
