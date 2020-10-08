@@ -27,6 +27,8 @@ The idea for the project is to automate a "hanging xylophone" type of instrument
 ![Screenshot](designs/sketch0.jpg)
 ![Screenshot](designs/sketch1.png)
 
+![Screenshot](designs/MU2801-Final-Project-Schematic.png)
+
 # Calculations
 assuming we use all 10' of the copper pipe   
 one octave higher of a pipe, size X, is 0.7071X  
