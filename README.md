@@ -1,5 +1,5 @@
 # MU2801-FINAL
-Final Project for Making Music With Machines (MU2801)
+Final Project for Making Music With Machines (MU2801) <br>
 Dylan, Evelyn, Peter, Declan
 
 # What is the idea?
