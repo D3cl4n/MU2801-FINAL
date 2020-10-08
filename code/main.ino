@@ -5,6 +5,17 @@ void setup()
 	
 }
 
+void playSong(uint16_t song[58])
+{
+	for (int i = 0; i < 58; i++)
+	{
+		if (song[i].noteValue == ... && song[i].noteName = ...)
+		{
+			// play note here	
+		}
+	}
+}
+
 void loop()
 {
 	int bpm = 60;
@@ -39,4 +50,6 @@ void loop()
 
 
 	uint16_t firstSong[58] = {}	// joy to world
+	
+	playSong(firstSong);
 }
