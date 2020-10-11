@@ -3,84 +3,89 @@ Final Project
 */
 
 //solenoid pins
-int do1 = ;
-int re = ;
+int do1 = 3;
+int re = 5;
+/*
 int mi = ;
 int fa = ;
 int so = ;
 int la = ;
 int ti = ;
 int do2 = ;
-
+*/
 int ontime = 50;
 
 
 void setup() {
     pinMode(do1, OUTPUT);
     pinMode(re, OUTPUT);
+    /*
     pinMode(mi, OUTPUT);
     pinMode(fa, OUTPUT);
     pinMode(so, OUTPUT);
     pinMode(la, OUTPUT);
     pinMode(ti, OUTPUT);
     pinMode(do2, OUTPUT);
-    
+    */
     while (!Serial);
     
     Serial.begin(9600);
 }
 
-void play(byte note, byte velocity){
+void play(int note, int velocity){
     int dynamic = (velocity/127)*50;
     
     if (note == 0){
+        Serial.println("Playing note c");
         digitalWrite(do1, HIGH);
+        Serial.println("Powered pin");
         delay(dynamic);
         digitalWrite(do1, LOW);
         delay(ontime);
     }else if (note == 2){
-        digitalWrite(do1, HIGH);
+        digitalWrite(re, HIGH);
         delay(dynamic);
-        digitalWrite(do1, LOW);
+        digitalWrite(re, LOW);
         delay(ontime);
     }else if (note == 4){
-        digitalWrite(do1, HIGH);
+        digitalWrite(mi, HIGH);
         delay(dynamic);
-        digitalWrite(do1, LOW);
+        digitalWrite(mi, LOW);
         delay(ontime);
     }else if (note == 5){
-        digitalWrite(do1, HIGH);
+        digitalWrite(fa, HIGH);
         delay(dynamic);
-        digitalWrite(do1, LOW);
+        digitalWrite(fa, LOW);
         delay(ontime);
     }else if (note == 7){
-        digitalWrite(do1, HIGH);
+        digitalWrite(so, HIGH);
         delay(dynamic);
-        digitalWrite(do1, LOW);
+        digitalWrite(so, LOW);
         delay(ontime);
     }else if (note == 9){
-        digitalWrite(do1, HIGH);
+        digitalWrite(la, HIGH);
         delay(dynamic);
-        digitalWrite(do1, LOW);
+        digitalWrite(la, LOW);
         delay(ontime);
     }else if (note == 11){
-        digitalWrite(do1, HIGH);
+        digitalWrite(ti, HIGH);
         delay(dynamic);
-        digitalWrite(do1, LOW);
+        digitalWrite(ti, LOW);
         delay(ontime);
     }else if (note == 12){
-        digitalWrite(do1, HIGH);
+        digitalWrite(do2, HIGH);
         delay(dynamic);
-        digitalWrite(do1, LOW);
+        digitalWrite(do2, LOW);
         delay(ontime);
     }
 }
 
 void loop() {
-    if (Serial.available>2){
-      byte note = Serial.read(); 
-      byte velocity = Serial.read();
+    if (Serial.available() > 0){
+      int note = Serial.parseInt(); 
+      int velocity = Serial.parseInt();
       if (velocity>0){
+        Serial.println("velocity > 0");
         play(note, velocity);
       }
     }
