@@ -30,15 +30,15 @@ The idea for the project is to automate a "hanging xylophone" type of instrument
 ![Screenshot](designs/MU2801-Final-Project-Schematic.png)
 
 # Calculations
-assuming we use all 10' of the copper pipe   
+assuming we use 9' of the copper pipe   
 one octave higher of a pipe, size X, is 0.7071X  
 one semitone higher of a pipe, size X, is 0.9715X  
 
-do (lower octave)   1'5.85"  
-re                  1'4.8468  
-mi                  1'3.936"  
-fa                  1'3.4476"  
-so                  1'2.5788"  
-la                  1'1.7604"  
-ti                  1'0.9876"  
-do (higher octave)  1'0.6216"  
+do (lower octave)   1' 4.0572"  
+re                  1' 3.15492"  
+mi                  1' 2.3034"  
+fa                  1' 1.89576"  
+so                  1' 1.11492"  
+la                  1' 0.37812"  
+ti                  0' 11.6826"  
+do (higher octave)  0' 11.35404"  
