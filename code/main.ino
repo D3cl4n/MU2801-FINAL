@@ -3,43 +3,38 @@ Final Project
 */
 
 //solenoid pins
-int do1 = 3;
-int re = 5;
-/*
-int mi = ;
-int fa = ;
-int so = ;
-int la = ;
-int ti = ;
-int do2 = ;
-*/
+int do1 = 5;
+int re = 12;
+int mi = 6;
+int fa = 9;
+int so = 11;
+int la = 10;
+int ti = 4;
+int do2 = 2;
+
 int ontime = 50;
 
 
 void setup() {
     pinMode(do1, OUTPUT);
     pinMode(re, OUTPUT);
-    /*
     pinMode(mi, OUTPUT);
     pinMode(fa, OUTPUT);
     pinMode(so, OUTPUT);
     pinMode(la, OUTPUT);
     pinMode(ti, OUTPUT);
     pinMode(do2, OUTPUT);
-    */
     while (!Serial);
     
     Serial.begin(9600);
 }
 
-void play(int note, int velocity){
-    int dynamic = (velocity/127)*50;
-    
+void play(byte note){
+    int dynamic = 25;   //originally was going to utilize velocity to determine the extension of solenoid, therefore dynamic,
+                        //but placement of solenoid and movement of pipe made it difficult to incorporate given time frame
     if (note == 0){
-        Serial.println("Playing note c");
         digitalWrite(do1, HIGH);
-        Serial.println("Powered pin");
-        delay(dynamic);
+        delay(50);
         digitalWrite(do1, LOW);
         delay(ontime);
     }else if (note == 2){
@@ -49,7 +44,7 @@ void play(int note, int velocity){
         delay(ontime);
     }else if (note == 4){
         digitalWrite(mi, HIGH);
-        delay(dynamic);
+        delay(50);
         digitalWrite(mi, LOW);
         delay(ontime);
     }else if (note == 5){
@@ -81,12 +76,12 @@ void play(int note, int velocity){
 }
 
 void loop() {
-    if (Serial.available() > 0){
-      int note = Serial.parseInt(); 
-      int velocity = Serial.parseInt();
+    if (Serial.available() > 1){
+      byte note = Serial.read(); 
+      byte velocity = Serial.read();
       if (velocity>0){
         Serial.println("velocity > 0");
-        play(note, velocity);
+        play(note);
       }
     }
 }
